@@ -47,7 +47,7 @@ function clearCube() {
 }
 
 function setStickerColors(newState) {
-	state = newState
+  state = newState
   clearCube()
 
   idx = 0
@@ -242,13 +242,13 @@ $( document ).ready($(function() {
 		type: 'POST',
 		dataType: 'json',
 		success: function(response){
-			setStickerColors(response.get('state'));
-			// setStickerColors(response["state"]);
-			// rotateIdxs_old = response["rotateIdxs_old"];
-			// rotateIdxs_new = response["rotateIdxs_new"];
-			// stateToFE = response["stateToFE"];
-			// FEToState = response["FEToState"];
-			// legalMoves = response["legalMoves"]
+			// setStickerColors(response('state'));
+			setStickerColors(response["state"]);
+			rotateIdxs_old = response["rotateIdxs_old"];
+			rotateIdxs_new = response["rotateIdxs_new"];
+			stateToFE = response["stateToFE"];
+			FEToState = response["FEToState"];
+			legalMoves = response["legalMoves"]
 			enableInput();
 		},
 		error: function(error) {
