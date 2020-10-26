@@ -1,11 +1,8 @@
 from django.shortcuts import render,redirect
-from flask import Flask
 from django.http import HttpResponse
 from django import forms
 from django.http import HttpResponseRedirect
 import json
-from flask import jsonify
-app=Flask(__name__)
 
 def run(request):
     print("helllo")
@@ -15,5 +12,4 @@ def initState(request):
     if request.method=='POST':
         with open('initState.json', 'r') as f:
             result = json.load(f)
-        with app.app_context():
-            return jsonify(result)
+            return  
