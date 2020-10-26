@@ -17,8 +17,11 @@ from django.conf.urls import url
 
 from . import views
 
+#from django.urls import path
+
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     url(r'^$', views.run),
-    url(r'^initState', views.initState)
+    url(r'^initState', views.initState),
+    url(r'^solve', views.solve)
 ]
